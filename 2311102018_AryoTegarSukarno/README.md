@@ -49,6 +49,8 @@ struktur dan isi halaman agar dapat ditampilkan dengan baik oleh browser.
 </p>
 
 # HASIL SS
+<img width="271" height="195" alt="image" src="https://github.com/user-attachments/assets/1f70f5c5-e2cb-4b12-b072-d5fb7c5b41ea" />
+<img width="385" height="469" alt="image" src="https://github.com/user-attachments/assets/23ead568-02c5-4c8e-9efe-c6bc44153a41" />
 
-![alt text](image.png)
-![alt text](image-1.png)
+
+
