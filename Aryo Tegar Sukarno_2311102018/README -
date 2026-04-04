@@ -1,0 +1,47 @@
+<div align="center">
+  <br />
+  <h1>LAPORAN PRAKTIKUM <br> APLIKASI BERBASIS PLATFORM </h1>
+  <br />
+  <h3>MODUL 3 <br> HTML</h3>
+  <br />
+  <img width="512" height="512" alt="telyu" src="https://github.com/user-attachments/assets/724a3291-bcf9-448d-a395-3886a8659d79" />
+  <br />
+  <br />
+  <br />
+  <h3>Disusun Oleh :Aryo Tegar Sukarno</h3>
+  <p>
+    <strong</strong>
+    <br>
+    <strong>2311102018</strong>
+    <br>
+    <strong>S1 IF-11-REG05</strong>
+  </p>
+  <br />
+  <h3>Dosen Pengampu :</h3>
+  <p>
+    <strong>Dedi Agung Prabowo, S.Kom., M.Kom</strong>
+  </p>
+  <br />
+  <br />
+  <h4>Asisten Praktikum :</h4>
+  <strong>Apri Pandu Wicaksono </strong>
+  <br>
+  <strong>Hamka Zaenul Ardi</strong>
+  <br />
+  <h3>LABORATORIUM HIGH PERFORMANCE <br>FAKULTAS INFORMATIKA <br>UNIVERSITAS TELKOM PURWOKERTO <br>2026 </h3>
+</div>
+
+<hr>
+
+# Dasar Teori
+
+HTML (HyperText Markup Language) adalah bahasa standar berbasis tag yang digunakan untuk membuat struktur dan kerangka dasar halaman website. HTML menentukan elemen konten seperti teks, gambar, tautan, dan video, lalu dirender oleh browser untuk ditampilkan. HTML5 adalah versi modern saat ini, dikelola oleh W3C.
+
+# Tugas 1
+
+Task Project Bucin (Edisi Imlek)
+Nah ini pesenan khusus nih, kalian bikin halaman untuk perayaan Imlek (demi si bubub). Jadi kalian buat halaman tapi cuma boleh pake pure CSS ga boleh pake JS ataupun framework styling kaya Bootstrap atau Tailwindcss
+
+# HASIL SS
+
+![alt text](<WhatsApp Image 2026-04-04 at 17.31.57-1.jpeg>)
