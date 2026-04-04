@@ -1,0 +1,195 @@
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Imlek Bucin · Untuk Bubub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(145deg, #8b0000 0%, #c62828 100%);
+            font-family: 'Segoe UI', 'Playfair Display', 'Georgia', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        /* latar belakang ornamen (pure CSS) */
+        body::before {
+            content: "🧧";
+            font-size: 220px;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            opacity: 0.1;
+            pointer-events: none;
+            transform: rotate(-15deg);
+        }
+
+        body::after {
+            content: "🐉";
+            font-size: 180px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            opacity: 0.12;
+            pointer-events: none;
+        }
+
+        .card {
+            max-width: 800px;
+            width: 100%;
+            background: #fffef7;
+            border-radius: 80px 40px 80px 40px;
+            box-shadow: 0 30px 40px rgba(0,0,0,0.3), inset 0 1px 4px rgba(255,255,200,0.8);
+            padding: 2rem 2rem 2.8rem;
+            text-align: center;
+            transition: all 0.2s ease;
+            border: 1px solid #ffd966;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ornamen sudut */
+        .card::before {
+            content: "🏮";
+            font-size: 70px;
+            position: absolute;
+            top: -30px;
+            left: -20px;
+            transform: rotate(-15deg);
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+        }
+
+        .card::after {
+            content: "🏮";
+            font-size: 70px;
+            position: absolute;
+            bottom: -30px;
+            right: -20px;
+            transform: rotate(15deg);
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+        }
+
+        .couple-icon {
+            font-size: 4rem;
+            letter-spacing: 15px;
+            background: linear-gradient(135deg, #ffb347, #ff5e00);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #b22222;
+            margin: 0.5rem 0;
+            text-shadow: 3px 3px 0 #ffcd94;
+            font-weight: 800;
+        }
+
+        .chinese-wish {
+            font-size: 1.7rem;
+            font-weight: bold;
+            background: #fff1c1;
+            display: inline-block;
+            padding: 0.2rem 1.5rem;
+            border-radius: 60px;
+            color: #c0392b;
+            margin: 20px 0;
+            border: 2px solid #e67e22;
+        }
+
+        .message {
+            font-size: 1.3rem;
+            line-height: 1.5;
+            margin: 1.2rem 0;
+            color: #2d2b1f;
+            font-style: italic;
+            padding: 0 1rem;
+        }
+
+        .red-packet {
+            background: #da3e2a;
+            padding: 1rem;
+            border-radius: 40px;
+            margin: 1.8rem 0;
+            color: #ffec80;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 8px 0 #8b1e1e;
+            transition: transform 0.1s ease;
+        }
+
+        .red-packet:hover {
+            transform: translateY(-4px);
+        }
+
+        .footer-love {
+            margin-top: 25px;
+            border-top: 2px dashed #ffb347;
+            padding-top: 20px;
+            font-size: 1.1rem;
+            color: #a1581c;
+            font-weight: 600;
+        }
+
+        .lantern-row {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            font-size: 2.4rem;
+            margin-top: 15px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+
+        @media (max-width: 550px) {
+            .card {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .message {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <div class="couple-icon">
+        💖🐇💖
+    </div>
+    <h1>Gong Xi Fa Cai, Sayangku 💕</h1>
+    <div class="chinese-wish">
+        🧧 新年快乐  🧧
+    </div>
+    <div class="message">
+        “Di tahun kelinci ini, aku cuma minta satu angpao: <strong>hati kamu selamanya</strong>.<br>
+        Semoga rezeki kita berlimpah, cinta kita makin berjaya, dan setiap hari Imlek buat kita.”
+    </div>
+    <div class="red-packet">
+        🧨 Untuk bubub tersayang 🧨<br>
+        Sehat, sukses, tambah gemoy & selalu bahagia ✨
+    </div>
+    <div class="lantern-row">
+        🏮 🐉 🏮
+    </div>
+    <div class="footer-love">
+        dari aku, untuk kamu yang paling spesial 💌
+    </div>
+</div>
+</body>
+</html>
