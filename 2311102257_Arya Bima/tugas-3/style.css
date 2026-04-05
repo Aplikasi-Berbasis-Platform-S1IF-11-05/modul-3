@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #8b0000, #2b0000);
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: gold;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #ffd700;
+}
+
+.container {
+  padding: 40px 20px;
+}
+
+.card {
+  background: rgba(255, 0, 0, 0.2);
+  border: 2px solid gold;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+.card h2 {
+  color: gold;
+  margin-bottom: 15px;
+}
+
+.card p {
+  line-height: 1.6;
+}
+
+.lantern {
+  width: 60px;
+  height: 80px;
+  background: red;
+  border-radius: 30px;
+  margin: 30px auto;
+  position: relative;
+  animation: float 3s ease-in-out infinite;
+}
+
+.lantern::before {
+  content: "";
+  width: 70px;
+  height: 10px;
+  background: gold;
+  position: absolute;
+  top: -10px;
+  left: -5px;
+  border-radius: 5px;
+}
+
+.lantern::after {
+  content: "";
+  width: 6px;
+  height: 30px;
+  background: gold;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.footer {
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #ffcccb;
+}
+
+.gold-line {
+  width: 80%;
+  height: 2px;
+  background: gold;
+  margin: 20px auto;
+}
