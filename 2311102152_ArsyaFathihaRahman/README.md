@@ -246,7 +246,6 @@ body {
 }
 ```
 Output:
-<img src="lunar.png" alt="preview" style="width:100%; max-width:900px;">
 <img width="1445" height="854" alt="lunar png" src="https://github.com/user-attachments/assets/c6958108-f2cd-409d-8273-80036df3affb" />
 
 # Penjelasan
