@@ -476,7 +476,7 @@ output:
 
 ---
 
-# Tugas 5: Toko Kelontong Pak Cik dan Mas Aimar
+# Tugas 6: Toko Kelontong Pak Cik dan Mas Aimar
 
 <img width="1280" height="720" alt="Output Tugas 6" src="tugas-6.1.png" />
 <img width="1280" height="720" alt="Output Tugas 6" src="tugas-6.2.png" />
