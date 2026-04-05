@@ -2,7 +2,7 @@
   <br />
   <h1>LAPORAN PRAKTIKUM <br> APLIKASI BERBASIS PLATFORM </h1>
   <br />
-  <h3>MODUL 3 <br> CSS </h3>
+  <h3>MODUL 3 Praktikum <br> CSS </h3>
   <br />
   <img width="512" height="512" alt="telyu" src="https://github.com/user-attachments/assets/724a3291-bcf9-448d-a395-3886a8659d79" />
   <br />
@@ -249,6 +249,7 @@ Output:
 <img width="1445" height="854" alt="lunar png" src="https://github.com/user-attachments/assets/c6958108-f2cd-409d-8273-80036df3affb" />
 
 # Penjelasan
+
 Program ini dibuat menggunakan HTML dan CSS untuk menghasilkan tampilan halaman web yang menyerupai sebuah buku terbuka dengan tema Imlek. Struktur utama pada HTML terdiri dari elemen div dengan class book yang berfungsi sebagai wadah utama. Di dalamnya terdapat dua elemen div dengan class page left dan page right yang merepresentasikan halaman kiri dan halaman kanan dari sebuah buku.
 
 Pada bagian halaman kiri (left), ditampilkan teks sederhana berupa karakter Tiongkok “新年快乐” yang berarti Selamat Tahun Baru, serta kalimat singkat sebagai pengantar. Sedangkan pada halaman kanan (right), ditampilkan judul utama “Gong Xi Fa Cai”, isi ucapan, garis pemisah, dan tanda tangan sebagai penutup. Pembagian ini bertujuan untuk memberikan kesan seperti membaca isi buku yang terbagi menjadi dua halaman.
