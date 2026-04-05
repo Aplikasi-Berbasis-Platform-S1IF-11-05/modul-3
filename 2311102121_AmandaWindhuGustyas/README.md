@@ -38,6 +38,7 @@
 CSS (Cascading Style Sheets) merupakan bahasa yang digunakan untuk mengatur tampilan dan desain dari halaman web yang dibuat menggunakan HTML. CSS berfungsi untuk mengontrol berbagai aspek visual seperti warna, ukuran teks, jenis font, tata letak, hingga efek visual lainnya sehingga tampilan website menjadi lebih menarik dan terstruktur. Dengan menggunakan CSS, pemisahan antara struktur (HTML) dan tampilan (CSS) dapat dilakukan, sehingga kode menjadi lebih rapi, mudah dikelola, serta memudahkan proses pengembangan dan pemeliharaan. CSS bekerja dengan cara memilih elemen HTML menggunakan selector, kemudian memberikan aturan berupa properti dan nilai untuk mengatur tampilannya. Dalam pengembangan web, CSS sangat penting karena dapat meningkatkan pengalaman pengguna melalui tampilan yang lebih estetis, konsisten, dan responsif.
 
 # Tugas 3
+## 1. Source Kode html
 ```
 //2311102121
 //Amanda Windhu Gustyas
@@ -76,6 +77,7 @@ CSS (Cascading Style Sheets) merupakan bahasa yang digunakan untuk mengatur tamp
 </body>
 </html>
 ```
+## 2. Source Kode css
 
 ```
 body {
@@ -167,4 +169,7 @@ footer {
 }
 ```
 Output:
-<img src="css.png" alt="preview" width="500">
+<img src="css.png" alt="preview" style="width:100%; max-width:900px;">
+
+# Penjelasan
+Kode HTML pada program ini digunakan untuk membangun struktur halaman web yang terdiri dari elemen utama berupa <div class="angpao"> sebagai wadah tampilan bertema angpao. Di dalamnya terdapat elemen dekorasi, judul, teks, serta karakter Tiongkok “福” yang melambangkan keberuntungan. Sementara itu, CSS digunakan untuk mengatur tampilan visual agar lebih menarik, seperti memberikan warna merah dan emas khas Imlek, mengatur posisi konten di tengah layar menggunakan flexbox, serta menambahkan efek seperti border-radius untuk bentuk melengkung dan box-shadow untuk memberikan kesan kedalaman. Kombinasi HTML dan CSS ini menghasilkan tampilan halaman yang rapi, estetis, dan sesuai dengan konsep desain yang diinginkan.
