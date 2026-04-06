@@ -1,0 +1,78 @@
+body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to bottom, #8B0000, #B22222);
+        color: #fff;
+        text-align: center;
+    }
+
+    header {
+        padding: 50px 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+        color: gold;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.1);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 20px auto;
+        width: 300px;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .btn {
+        background: gold;
+        color: #8B0000;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background: orange;
+    }
+
+    /* animasi hati */
+    .heart {
+        position: fixed;
+        bottom: -50px;
+        font-size: 20px;
+        animation: floatUp 5s linear infinite;
+    }
+
+    @keyframes floatUp {
+        0% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-100vh);
+            opacity: 0;
+        }
+    }
+
+    footer {
+        margin-top: 40px;
+        padding: 20px;
+        font-size: 14px;
+        opacity: 0.8;
+    }
