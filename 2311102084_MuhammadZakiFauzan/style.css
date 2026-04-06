@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #8b0000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+}
+
+.sky {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.lantern-top {
+    font-size: 50px;
+    animation: swing 3s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+@keyframes swing {
+    0%, 100% { transform: rotate(-12deg); }
+    50% { transform: rotate(12deg); }
+}
+
+.card {
+    background-color: #d40000;
+    padding: 20px;
+    border: 4px solid #ffd700;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    width: 320px;
+    position: relative;
+    z-index: 10;
+}
+
+.border-inner {
+    border: 2px solid #ffd700;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.ornament {
+    color: #ffd700;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #8b0000;
+    font-size: 1.5rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.year {
+    color: #b8860b;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.greeting {
+    color: #d40000;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.message-box {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.angpao {
+    font-size: 45px;
+    margin-top: 15px;
+    animation: float 2.5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.signature {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #777;
+    font-weight: bold;
+}

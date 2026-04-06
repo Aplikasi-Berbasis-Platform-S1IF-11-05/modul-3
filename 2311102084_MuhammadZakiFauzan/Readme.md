@@ -35,8 +35,7 @@
 
 # Dasar Teori CSS (Cascading Style Sheets)
 
-CSS (Cascading Style Sheets) adalah bahasa desain yang digunakan untuk mengontrol tampilan dan format visual dari dokumen yang ditulis dalam bahasa markup (seperti HTML). CSS memungkinkan pemisahan antara konten (HTML) dan presentasi (desain), sehingga kode menjadi lebih rapi, mudah dikelola, dan dapat digunakan kembali.
-
+CSS (Cascading Style Sheets) adalah bahasa pemrograman yang berfungsi untuk mengatur estetika dan tata letak sebuah halaman desain web agar terlihat lebih menarik dan terstruktur. Jika HTML berperan sebagai kerangka atau struktur dasar sebuah bangunan, maka CSS adalah cat, furnitur, dan dekorasi yang menentukan warna, ukuran font, hingga posisi elemen di dalam layar. Dengan memisahkan konten (HTML) dari desain (CSS), kamu bisa mengubah seluruh tampilan halaman dengan lebih mudah dan efisien hanya melalui satu file pengaturan saja.
 ## Metode Penempatan CSS
 
 Terdapat tiga cara utama untuk menerapkan CSS ke dalam dokumen HTML:
@@ -51,7 +50,7 @@ External CSS: Ditulis di file terpisah dengan ekstensi .css dan dihubungkan meng
 
 ```css
 p {
-  color: blue;
+  color: yellow;
   font-size: 14px;
 }
 ```
@@ -63,29 +62,42 @@ p {
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Gong Xi Fa Cai, Bubub!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gong Xi Fa Cai - Project Bucin</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="lantern-wrapper">
-            <div class="lantern">🏮</div>
-            <div class="lantern">🏮</div>
-        </div>
 
-        <div class="card">
-            <h1>Gong Xi Fa Cai</h1>
-            <h2>Happy Chinese New Year</h2>
-            <p>Untuk kesayanganku...</p>
-            
-            <input type="checkbox" id="open-message">
-            <label for="open-message" class="btn-angpao">Buka Angpao 🧧</label>
-            
-            <div class="hidden-message">
-                <p>Semoga di tahun Naga/Ular ini, kita makin langgeng dan bahagia terus ya! I love you! ❤️</p>
-            </div>
-        </div>
+    <div class="sky">
+        <div class="lantern-top">🏮</div>
+        <div class="lantern-top">🏮</div>
+        <div class="lantern-top">🏮</div>
+        <div class="lantern-top">🏮</div>
     </div>
+
+    <main class="card">
+        <div class="border-inner">
+            <header>
+                <div class="ornament">✿</div>
+                <h1>Happy Chinese New Year</h1>
+                <p class="year">2026</p>
+            </header>
+
+            <section class="content">
+                <p class="greeting">Gong Xi Fa Cai, Wan Shi Ru Yi</p>
+                <div class="message-box">
+                    <p>Selamat Tahun Baru Imlek, Bubub! ❤️</p>
+                    <p>Semoga di tahun ini kita selalu dikelilingi kebahagiaan, kesehatan, dan cinta yang makin kuat setiap harinya.</p>
+                </div>
+            </section>
+
+            <footer>
+                <div class="angpao">🧧</div>
+                <p class="signature">With Love, Zaki</p>
+            </footer>
+        </div>
+    </main>
+
 </body>
 </html>
 ```
@@ -94,86 +106,110 @@ p {
 
 ```css
 body {
-    background-color: #800000; 
+    margin: 0;
+    padding: 0;
+    background-color: #8b0000;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #FFD700; 
+    font-family: 'Trebuchet MS', sans-serif;
     overflow: hidden;
 }
 
-.container {
-    text-align: center;
-    position: relative;
-}
-
-.lantern-wrapper {
+.sky {
+    position: absolute;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    width: 100%;
-    position: absolute;
-    top: -150px;
 }
 
-.lantern {
-    font-size: 3rem;
-    animation: sway 3s ease-in-out infinite;
+.lantern-top {
+    font-size: 50px;
+    animation: swing 3s ease-in-out infinite;
+    transform-origin: top center;
 }
 
-@keyframes sway {
-    0%, 100% { transform: rotate(-10deg); }
-    50% { transform: rotate(10deg); }
+@keyframes swing {
+    0%, 100% { transform: rotate(-12deg); }
+    50% { transform: rotate(12deg); }
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border: 3px solid #FFD700;
-    border-radius: 15px;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background-color: #d40000;
+    padding: 20px;
+    border: 4px solid #ffd700;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    width: 320px;
+    position: relative;
+    z-index: 10;
 }
 
-#open-message {
-    display: none; 
+.border-inner {
+    border: 2px solid #ffd700;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
 }
 
-.hidden-message {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.8s ease-in-out, opacity 0.5s;
-    opacity: 0;
-    margin-top: 20px;
-    font-style: italic;
+.ornament {
+    color: #ffd700;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-#open-message:checked ~ .hidden-message {
-    max-height: 200px;
-    opacity: 1;
+h1 {
+    color: #8b0000;
+    font-size: 1.5rem;
+    margin: 0;
+    text-transform: uppercase;
 }
 
-.btn-angpao {
-    display: inline-block;
-    background: #FFD700;
-    color: #800000;
-    padding: 10px 20px;
-    border-radius: 50px;
-    cursor: pointer;
+.year {
+    color: #b8860b;
     font-weight: bold;
-    transition: transform 0.3s;
+    font-size: 1.2rem;
+    margin: 5px 0;
 }
 
-.btn-angpao:hover {
-    transform: scale(1.1);
+.greeting {
+    color: #d40000;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.message-box {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.angpao {
+    font-size: 45px;
+    margin-top: 15px;
+    animation: float 2.5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.signature {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #777;
+    font-weight: bold;
 }
 ```
 
 
 Output:
-<img src="Modul3.png" alt="preview" style="width:100%; max-width:900px;">
+<img src="tugas3.png" alt="preview" style="width:100%; max-width:900px;">
 
 # Penjelasan
-Penerapan Pure CSS pada proyek website perayaan Imlek ini merupakan sebuah eksperimen desain yang memadukan estetika tradisional oriental dengan kecanggihan logika styling modern, di mana setiap elemen visual seperti lampion yang bergoyang, kartu ucapan bernuansa emas, hingga mekanisme "buka angpao" digerakkan sepenuhnya oleh fitur bawaan CSS tanpa bantuan JavaScript. 
+Penerapan Pure CSS pada proyek website perayaan Imlek ini merupakan sebuah eksplorasi desain yang memaksimalkan potensi fitur-fitur modern front-end tanpa ketergantungan pada library pihak ketiga. Seluruh komponen visual, mulai dari ayunan lampion yang dinamis hingga tata letak kartu bernuansa emas, dikonstruksi sepenuhnya menggunakan CSS Keyframes dan Flexbox untuk memastikan performa rendering yang ringan namun tetap menghadirkan estetika oriental yang imersif dan responsif.. 
