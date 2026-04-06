@@ -173,7 +173,7 @@ body {
 
 
 Output:
-<img src="ScreenshotCSS.PNG" alt="preview" style="width:100%; max-width:900px;">
+<img src="ScreenshotCSS.png" alt="preview" style="width:100%; max-width:900px;">
 
 # Penjelasan
 Kode CSS tersebut digunakan untuk mengatur tampilan halaman bertema Imlek agar terlihat menarik, terpusat, dan responsif tanpa menggunakan JavaScript. Penggunaan flexbox pada .container memungkinkan seluruh konten berada di tengah layar, sementara properti seperti background, box-shadow, dan animation digunakan untuk memberikan efek visual seperti gradasi warna, bayangan, dan animasi lampion agar tampilan lebih hidup.
