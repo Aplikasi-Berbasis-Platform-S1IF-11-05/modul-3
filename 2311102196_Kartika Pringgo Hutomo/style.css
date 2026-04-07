@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #8B0000, #B22222);
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  padding: 50px 20px;
+}
+
+h1 {
+  font-size: 3em;
+  color: gold;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.heart {
+  font-size: 50px;
+  animation: beat 1s infinite;
+}
+
+@keyframes beat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.message {
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: gold;
+  color: #8B0000;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ffd700;
+  transform: scale(1.1);
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
