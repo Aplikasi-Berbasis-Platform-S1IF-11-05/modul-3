@@ -1,0 +1,602 @@
+/* ============================
+   Project Bucin - Edisi Imlek
+   Pure CSS - No JS / No Framework
+   2311102315 - Muhamad Rafli Al Farizqi
+   ============================ */
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: radial-gradient(ellipse at top, #8b0000, #4a0000 50%, #1a0000);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ============ LAMPION ============ */
+.lantern {
+    position: fixed;
+    width: 60px;
+    height: 80px;
+    background: radial-gradient(ellipse, #ff4444, #cc0000);
+    border-radius: 50%;
+    top: 30px;
+    z-index: 10;
+    box-shadow: 0 0 30px rgba(255, 68, 68, 0.6), 0 0 60px rgba(255, 0, 0, 0.3);
+    animation: lanternSwing 3s ease-in-out infinite;
+}
+
+.lantern::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 15px;
+    background: linear-gradient(to bottom, #ffd700, #daa520);
+    border-radius: 5px 5px 0 0;
+}
+
+.lantern::after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 25px;
+    background: linear-gradient(to bottom, #daa520, #b8860b);
+    border-radius: 0 0 3px 3px;
+}
+
+.lantern-left {
+    left: 30px;
+    animation-delay: 0s;
+}
+
+.lantern-right {
+    right: 30px;
+    animation-delay: 1.5s;
+}
+
+@keyframes lanternSwing {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+/* ============ KEMBANG API CSS ============ */
+.firework {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    animation: fireworkBurst 2s ease-out infinite;
+}
+
+.firework::before,
+.firework::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    animation: fireworkSparkle 2s ease-out infinite;
+}
+
+.firework-1 {
+    top: 10%;
+    left: 20%;
+    background: #ffd700;
+    box-shadow:
+        20px -20px 0 #ff6347,
+        -20px -20px 0 #ffd700,
+        20px 20px 0 #ff4500,
+        -20px 20px 0 #ffcc00,
+        0 -30px 0 #ff6347,
+        0 30px 0 #ffd700,
+        30px 0 0 #ff4500,
+        -30px 0 0 #ffcc00;
+    animation-delay: 0s;
+}
+
+.firework-2 {
+    top: 15%;
+    right: 15%;
+    background: #ff69b4;
+    box-shadow:
+        15px -25px 0 #ff1493,
+        -15px -25px 0 #ff69b4,
+        25px 15px 0 #ff1493,
+        -25px 15px 0 #ff69b4,
+        0 -30px 0 #ff1493,
+        0 30px 0 #ff69b4,
+        30px 0 0 #ff1493,
+        -30px 0 0 #ff69b4;
+    animation-delay: 0.7s;
+}
+
+.firework-3 {
+    top: 5%;
+    left: 50%;
+    background: #ffa500;
+    box-shadow:
+        20px -15px 0 #ff8c00,
+        -20px -15px 0 #ffa500,
+        15px 25px 0 #ff8c00,
+        -15px 25px 0 #ffa500,
+        0 -28px 0 #ff8c00,
+        0 28px 0 #ffa500,
+        28px 0 0 #ff8c00,
+        -28px 0 0 #ffa500;
+    animation-delay: 1.4s;
+}
+
+@keyframes fireworkBurst {
+    0% { transform: scale(0); opacity: 1; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes fireworkSparkle {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* ============ CONTAINER ============ */
+.container {
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+/* ============ HEADER ============ */
+.header {
+    text-align: center;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #cc0000, #990000, #cc0000);
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #ffd700;
+    border-bottom: none;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 20px,
+            rgba(255, 215, 0, 0.03) 20px,
+            rgba(255, 215, 0, 0.03) 40px
+        );
+}
+
+.dragon-border {
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, transparent, #ffd700, #ffaa00, #ffd700, transparent);
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.fu-character {
+    font-size: 80px;
+    color: #ffd700;
+    font-weight: bold;
+    text-shadow:
+        0 0 20px rgba(255, 215, 0, 0.8),
+        0 0 40px rgba(255, 215, 0, 0.4),
+        2px 2px 0 #aa0000;
+    margin: 10px 0;
+    animation: fuGlow 2s ease-in-out infinite alternate;
+    display: inline-block;
+    position: relative;
+}
+
+@keyframes fuGlow {
+    0% { text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.4); }
+    100% { text-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 215, 0, 0.6), 0 0 80px rgba(255, 215, 0, 0.3); }
+}
+
+.header h1 {
+    font-size: 32px;
+    color: #ffd700;
+    margin: 15px 0 5px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.header h2 {
+    font-size: 18px;
+    color: #ffcc80;
+    font-weight: normal;
+    letter-spacing: 5px;
+    position: relative;
+}
+
+.subtitle {
+    color: #ffaa00;
+    font-size: 14px;
+    margin-top: 10px;
+    font-style: italic;
+    position: relative;
+}
+
+/* ============ LOVE CARD ============ */
+.love-card {
+    background: linear-gradient(180deg, #990000, #800000, #660000);
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    border-left: 3px solid #ffd700;
+    border-right: 3px solid #ffd700;
+}
+
+/* Ornamen sudut */
+.card-ornament {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #ffd700;
+    opacity: 0.5;
+}
+
+.top-left {
+    top: 15px;
+    left: 15px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.top-right {
+    top: 15px;
+    right: 15px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.bottom-left {
+    bottom: 15px;
+    left: 15px;
+    border-right: none;
+    border-top: none;
+}
+
+.bottom-right {
+    bottom: 15px;
+    right: 15px;
+    border-left: none;
+    border-top: none;
+}
+
+/* Hati */
+.heart-container {
+    position: relative;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.heart {
+    width: 60px;
+    height: 55px;
+    background: #ff2d55;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    border-radius: 50% 50% 0 0;
+    animation: heartBeat 1.2s ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(255, 45, 85, 0.6);
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    width: 60px;
+    height: 55px;
+    background: #ff2d55;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -28px;
+    left: 0;
+}
+
+.heart::after {
+    left: 28px;
+    top: 0;
+}
+
+.heart-small {
+    width: 25px;
+    height: 23px;
+    top: 10px;
+    left: 30%;
+    animation-delay: 0.3s;
+    opacity: 0.6;
+}
+
+.heart-small::before,
+.heart-small::after {
+    width: 25px;
+    height: 23px;
+}
+
+.heart-small::before {
+    top: -12px;
+}
+
+.heart-small::after {
+    left: 12px;
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: translate(-50%, -50%) rotate(-45deg) scale(1); }
+    15% { transform: translate(-50%, -50%) rotate(-45deg) scale(1.15); }
+    30% { transform: translate(-50%, -50%) rotate(-45deg) scale(1); }
+    45% { transform: translate(-50%, -50%) rotate(-45deg) scale(1.1); }
+}
+
+.love-card h3 {
+    color: #ffd700;
+    font-size: 24px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* Surat Cinta */
+.love-letter {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 25px 20px;
+    margin: 0 10px 25px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.love-letter p {
+    color: #ffe4c4;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.love-letter p:last-child {
+    margin-bottom: 0;
+}
+
+.love-letter .highlight {
+    color: #ffd700;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    padding: 10px 0;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+}
+
+.divider-icon {
+    color: #ff2d55;
+    font-size: 20px;
+    margin: 0 15px;
+    animation: heartBeat 1.2s ease-in-out infinite;
+    display: inline-block;
+}
+
+/* Wishes */
+.wishes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 0 10px;
+}
+
+.wish-item {
+    background: rgba(255, 215, 0, 0.08);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 12px;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.wish-item:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 215, 0, 0.15);
+}
+
+.wish-icon {
+    font-size: 28px;
+}
+
+.wish-item span:last-child {
+    color: #ffe4c4;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* ============ ANGPAO SECTION ============ */
+.angpao-section {
+    background: linear-gradient(180deg, #660000, #770000);
+    padding: 30px;
+    text-align: center;
+    border-left: 3px solid #ffd700;
+    border-right: 3px solid #ffd700;
+}
+
+.angpao {
+    width: 180px;
+    margin: 0 auto 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.angpao-top {
+    height: 30px;
+    background: linear-gradient(to right, #daa520, #ffd700, #daa520);
+    border-radius: 10px 10px 0 0;
+}
+
+.angpao-body {
+    background: linear-gradient(135deg, #ee0000, #cc0000, #ee0000);
+    padding: 30px 20px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.angpao:hover .angpao-body {
+    transform: scale(1.05);
+}
+
+.angpao-flap {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 35px;
+    background: linear-gradient(to bottom, #ffd700, #daa520);
+    border-radius: 0 0 50% 50%;
+    transition: transform 0.3s;
+}
+
+.angpao:hover .angpao-flap {
+    transform: translateX(-50%) rotateX(30deg);
+}
+
+.angpao-symbol {
+    font-size: 50px;
+    color: #ffd700;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    position: relative;
+    z-index: 2;
+}
+
+.angpao-text {
+    color: #ffd700;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.angpao-caption {
+    color: #ffcc80;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* ============ FOOTER ============ */
+.footer {
+    background: linear-gradient(135deg, #550000, #440000);
+    padding: 30px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    border: 3px solid #ffd700;
+    border-top: none;
+}
+
+.footer-border {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #ffd700, #ffaa00, #ffd700, transparent);
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.closing-text {
+    color: #ffd700;
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.from {
+    color: #ffe4c4;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.from strong {
+    color: #ffd700;
+}
+
+.nim {
+    color: #aa8866;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 550px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .fu-character {
+        font-size: 60px;
+    }
+
+    .wishes {
+        grid-template-columns: 1fr;
+    }
+
+    .lantern {
+        width: 40px;
+        height: 55px;
+    }
+
+    .lantern-left {
+        left: 10px;
+    }
+
+    .lantern-right {
+        right: 10px;
+    }
+}
