@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Imlek Night</title>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle, #1a0000, #000);
+    color: #ffd700;
+    font-family: 'Georgia';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.lantern {
+    width: 80px;
+    height: 100px;
+    background: red;
+    border-radius: 50% 50% 40% 40%;
+    margin: 20px auto;
+    box-shadow: 0 0 30px gold;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0);}
+    50% { transform: translateY(-20px);}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="lantern"></div>
+    <h1>恭喜发财</h1>
+    <p>Semoga tahun ini penuh keberuntungan ✨</p>
+</div>
+
+</body>
+</html>
