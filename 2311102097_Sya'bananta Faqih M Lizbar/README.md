@@ -10,9 +10,9 @@
   <br />
   <h3>Disusun Oleh :</h3>
   <p>
-    <strong>Rasyid Nafsyarie</strong>
+    <strong>Sya'bananta Faqih M Lizbar</strong>
     <br>
-    <strong>2311102011</strong>
+    <strong>2311102097</strong>
     <br>
     <strong>S1 IF-11-REG05</strong>
   </p>
