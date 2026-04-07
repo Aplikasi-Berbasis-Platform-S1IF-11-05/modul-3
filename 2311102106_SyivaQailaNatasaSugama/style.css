@@ -1,0 +1,506 @@
+    :root {
+      --red:        #C0182B;
+      --red-dark:   #8B0000;
+      --red-light:  #E8273C;
+      --gold:       #F5C842;
+      --gold-light: #FFE87A;
+      --gold-dark:  #B8962E;
+      --cream:      #FFF8E7;
+      --ink:        #1A0A00;
+      --lantern1:   #E8273C;
+      --lantern2:   #C0182B;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--red-dark);
+      color: var(--cream);
+      font-family: 'IM Fell English SC', serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 40px,
+          rgba(245,200,66,0.04) 40px,
+          rgba(245,200,66,0.04) 42px
+        ),
+        repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 40px,
+          rgba(245,200,66,0.04) 40px,
+          rgba(245,200,66,0.04) 42px
+        );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .confetti-wrap {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .petal {
+      position: absolute;
+      top: -60px;
+      font-size: 1.4rem;
+      animation: fall linear infinite;
+      opacity: 0.8;
+    }
+
+    .petal:nth-child(1)  { left: 5%;   animation-duration: 7s;  animation-delay: 0s;   font-size:1.1rem; }
+    .petal:nth-child(2)  { left: 12%;  animation-duration: 9s;  animation-delay: 1.2s; font-size:1.6rem; }
+    .petal:nth-child(3)  { left: 22%;  animation-duration: 6s;  animation-delay: 0.4s; font-size:0.9rem; }
+    .petal:nth-child(4)  { left: 35%;  animation-duration: 8s;  animation-delay: 2.1s; font-size:1.3rem; }
+    .petal:nth-child(5)  { left: 48%;  animation-duration: 11s; animation-delay: 0.7s; font-size:1.8rem; }
+    .petal:nth-child(6)  { left: 58%;  animation-duration: 7.5s;animation-delay: 1.8s; font-size:1.0rem; }
+    .petal:nth-child(7)  { left: 68%;  animation-duration: 9.5s;animation-delay: 0.2s; font-size:1.4rem; }
+    .petal:nth-child(8)  { left: 78%;  animation-duration: 6.5s;animation-delay: 3.0s; font-size:1.2rem; }
+    .petal:nth-child(9)  { left: 88%;  animation-duration: 8.5s;animation-delay: 1.5s; font-size:1.7rem; }
+    .petal:nth-child(10) { left: 95%;  animation-duration: 10s; animation-delay: 0.9s; font-size:1.0rem; }
+    .petal:nth-child(11) { left: 18%;  animation-duration: 12s; animation-delay: 4.0s; font-size:1.3rem; }
+    .petal:nth-child(12) { left: 42%;  animation-duration: 7.2s;animation-delay: 2.5s; font-size:1.5rem; }
+    .petal:nth-child(13) { left: 75%;  animation-duration: 8.8s;animation-delay: 3.5s; font-size:1.1rem; }
+    .petal:nth-child(14) { left: 30%;  animation-duration: 9.2s;animation-delay: 1.0s; font-size:1.6rem; }
+    .petal:nth-child(15) { left: 62%;  animation-duration: 6.8s;animation-delay: 2.8s; font-size:0.8rem; }
+
+    @keyframes fall {
+      0%   { transform: translateY(-60px) rotate(0deg);   opacity: 0; }
+      10%  { opacity: 0.9; }
+      90%  { opacity: 0.7; }
+      100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+    }
+
+
+    .page {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+
+    .lantern-row {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      padding-top: 1.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .lantern {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: sway 3s ease-in-out infinite;
+    }
+    .lantern:nth-child(even) { animation-delay: 1.5s; }
+    .lantern:nth-child(3)    { animation-delay: 0.8s; }
+
+    @keyframes sway {
+      0%, 100% { transform: rotate(-8deg); }
+      50%       { transform: rotate( 8deg); }
+    }
+
+    .lantern-string {
+      width: 2px;
+      height: 24px;
+      background: var(--gold);
+    }
+
+    .lantern-body {
+      width: 44px;
+      height: 70px;
+      background: radial-gradient(ellipse at 40% 35%, #FF6B6B 0%, var(--lantern1) 50%, var(--red-dark) 100%);
+      border-radius: 50% 50% 45% 45% / 40% 40% 60% 60%;
+      border: 2px solid var(--gold-dark);
+      position: relative;
+      box-shadow:
+        0 0 18px 6px rgba(232,39,60,0.55),
+        0 0 40px 12px rgba(245,200,66,0.2),
+        inset 0 4px 12px rgba(255,220,100,0.3);
+      animation: glow 3s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 18px 6px rgba(232,39,60,0.55), 0 0 40px 12px rgba(245,200,66,0.2), inset 0 4px 12px rgba(255,220,100,0.3); }
+      50%       { box-shadow: 0 0 28px 12px rgba(232,39,60,0.8), 0 0 60px 20px rgba(245,200,66,0.35), inset 0 4px 16px rgba(255,220,100,0.5); }
+    }
+
+    .lantern-body::before {
+      content: '';
+      position: absolute;
+      top: 8px; left: 50%;
+      transform: translateX(-50%);
+      width: 2px; height: 54px;
+      background: rgba(245,200,66,0.25);
+    }
+
+    .lantern-body::after {
+      content: '';
+      position: absolute;
+      top: 8px; left: 50%;
+      transform: translateX(-50%) rotate(90deg);
+      width: 2px; height: 32px;
+      background: rgba(245,200,66,0.2);
+      margin-top: 11px;
+    }
+
+    .lantern-cap {
+      width: 50px;
+      height: 10px;
+      background: linear-gradient(to bottom, var(--gold-light), var(--gold-dark));
+      border-radius: 4px 4px 0 0;
+      border: 1px solid var(--gold-dark);
+    }
+
+    .lantern-base {
+      width: 50px;
+      height: 10px;
+      background: linear-gradient(to top, var(--gold-light), var(--gold-dark));
+      border-radius: 0 0 4px 4px;
+      border: 1px solid var(--gold-dark);
+    }
+
+    .lantern-tassel {
+      width: 2px;
+      height: 20px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+    }
+    .lantern-tassel::after {
+      content: '❧';
+      position: absolute;
+      font-size: 0.7rem;
+      color: var(--gold);
+      margin-top: 18px;
+      margin-left: -5px;
+    }
+
+    .rope {
+      width: 100%;
+      height: 18px;
+      position: relative;
+      margin-top: -10px;
+      margin-bottom: 0;
+    }
+    .rope svg { width: 100%; height: 100%; }
+    .hero {
+      text-align: center;
+      padding: 2.5rem 0 1.5rem;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-family: 'Ma Shan Zheng', cursive;
+      font-size: 5rem;
+      color: var(--gold);
+      text-shadow:
+        0 0 20px rgba(245,200,66,0.8),
+        0 0 60px rgba(245,200,66,0.4),
+        2px 2px 0 var(--red-dark);
+      animation: pulse-gold 2.5s ease-in-out infinite;
+      letter-spacing: 0.1em;
+      line-height: 1;
+    }
+
+    @keyframes pulse-gold {
+      0%, 100% { text-shadow: 0 0 20px rgba(245,200,66,0.8), 0 0 60px rgba(245,200,66,0.4), 2px 2px 0 var(--red-dark); }
+      50%       { text-shadow: 0 0 35px rgba(245,200,66,1.0), 0 0 90px rgba(245,200,66,0.7), 2px 2px 0 var(--red-dark); }
+    }
+
+    .hero-sub {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1rem;
+      color: var(--gold-light);
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      margin-top: 0.4rem;
+      opacity: 0.85;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 1.2rem auto;
+      max-width: 480px;
+    }
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+    }
+    .divider-icon {
+      color: var(--gold);
+      font-size: 1.4rem;
+      text-shadow: 0 0 10px rgba(245,200,66,0.6);
+    }
+
+    .main-title {
+      text-align: center;
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: clamp(1.5rem, 5vw, 2.8rem);
+      color: var(--gold);
+      text-shadow: 0 2px 16px rgba(245,200,66,0.5), 0 0 2px var(--red-dark);
+      letter-spacing: 0.05em;
+      line-height: 1.3;
+      margin-bottom: 0.4rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05rem;
+      color: rgba(255,232,122,0.75);
+      letter-spacing: 0.2em;
+      margin-bottom: 2.5rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .card {
+      background: linear-gradient(145deg, rgba(139,0,0,0.6) 0%, rgba(80,0,0,0.8) 100%);
+      border: 1px solid var(--gold-dark);
+      border-radius: 12px;
+      padding: 1.8rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 12px 40px rgba(245,200,66,0.25), 0 0 0 1px var(--gold);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+    }
+
+    .card-icon {
+      font-size: 2.8rem;
+      display: block;
+      margin-bottom: 0.8rem;
+      animation: bob 3.5s ease-in-out infinite;
+    }
+
+    .card:nth-child(2) .card-icon { animation-delay: 0.6s; }
+    .card:nth-child(3) .card-icon { animation-delay: 1.2s; }
+
+    @keyframes bob {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-6px); }
+    }
+
+    .card-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.05em;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: rgba(255,248,231,0.8);
+      line-height: 1.7;
+    }
+
+    .message-banner {
+      background: linear-gradient(135deg, rgba(139,0,0,0.7), rgba(80,0,0,0.9));
+      border: 2px solid var(--gold-dark);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      margin: 2rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .message-banner::before {
+      content: '囍';
+      position: absolute;
+      top: -10px; left: -10px;
+      font-family: 'Ma Shan Zheng', cursive;
+      font-size: 8rem;
+      color: rgba(245,200,66,0.07);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .message-banner::after {
+      content: '囍';
+      position: absolute;
+      bottom: -10px; right: -10px;
+      font-family: 'Ma Shan Zheng', cursive;
+      font-size: 8rem;
+      color: rgba(245,200,66,0.07);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .message-label {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.4em;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .message-text {
+      font-family: 'Ma Shan Zheng', cursive;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      color: var(--gold-light);
+      line-height: 1.6;
+      text-shadow: 0 0 20px rgba(245,200,66,0.3);
+      position: relative;
+      z-index: 1;
+    }
+
+    .message-from {
+      margin-top: 1.2rem;
+      font-size: 0.85rem;
+      color: rgba(255,232,122,0.55);
+      letter-spacing: 0.2em;
+    }
+
+    .hanzi-section {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .hanzi-char {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hanzi-big {
+      font-family: 'Ma Shan Zheng', cursive;
+      font-size: 4.5rem;
+      color: var(--gold);
+      text-shadow:
+        0 0 20px rgba(245,200,66,0.6),
+        0 0 1px var(--red-dark);
+      line-height: 1;
+      animation: float-char 4s ease-in-out infinite;
+    }
+
+    .hanzi-char:nth-child(2) .hanzi-big { animation-delay: 0.5s; }
+    .hanzi-char:nth-child(3) .hanzi-big { animation-delay: 1.0s; }
+    .hanzi-char:nth-child(4) .hanzi-big { animation-delay: 1.5s; }
+
+    @keyframes float-char {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50%       { transform: translateY(-8px) scale(1.05); }
+    }
+
+    .hanzi-label {
+      font-size: 0.7rem;
+      color: rgba(255,232,122,0.5);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .fireworks {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+      font-size: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .fw { animation: blink 1.2s ease-in-out infinite; }
+    .fw:nth-child(2) { animation-delay: 0.2s; }
+    .fw:nth-child(3) { animation-delay: 0.4s; }
+    .fw:nth-child(4) { animation-delay: 0.6s; }
+    .fw:nth-child(5) { animation-delay: 0.8s; }
+    .fw:nth-child(6) { animation-delay: 1.0s; }
+
+    @keyframes blink {
+      0%, 100% { transform: scale(1);    opacity: 0.7; }
+      50%       { transform: scale(1.3); opacity: 1.0; filter: drop-shadow(0 0 8px gold); }
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem 0 1rem;
+      border-top: 1px solid rgba(245,200,66,0.2);
+      margin-top: 3rem;
+    }
+
+    .footer-hanzi {
+      font-family: 'Ma Shan Zheng', cursive;
+      font-size: 2.5rem;
+      color: var(--gold);
+      letter-spacing: 0.5em;
+      text-shadow: 0 0 15px rgba(245,200,66,0.5);
+      animation: pulse-gold 3s ease-in-out infinite;
+    }
+
+    .footer-text {
+      margin-top: 0.6rem;
+      font-size: 0.78rem;
+      color: rgba(255,232,122,0.35);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+
+    .corner {
+      position: fixed;
+      font-size: 3.5rem;
+      color: rgba(245,200,66,0.12);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .corner-tl { top: 12px;    left: 12px; }
+    .corner-tr { top: 12px;    right: 12px; transform: scaleX(-1); }
+    .corner-bl { bottom: 12px; left: 12px;  transform: scaleY(-1); }
+    .corner-br { bottom: 12px; right: 12px; transform: scale(-1); }
+
+    @media (max-width: 500px) {
+      .lantern-row { gap: 1.5rem; }
+      .hero-badge   { font-size: 3.8rem; }
+      .hanzi-big    { font-size: 3.5rem; }
+      .cards        { grid-template-columns: 1fr; }
+    }

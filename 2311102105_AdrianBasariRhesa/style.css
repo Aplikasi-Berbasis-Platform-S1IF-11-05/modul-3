@@ -1,0 +1,146 @@
+/*2311102105-Adrian Basari Rhesa*/
+:root {
+    --primary-red: #d32f2f;
+    --gold: #ffd700;
+    --dark-red: #8b0000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--dark-red), var(--primary-red));
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow: hidden;
+    /* Supaya efek animasi tidak membuat scrollbar muncul */
+}
+
+/* Animasi Elemen Jatuh */
+.lantern {
+    position: absolute;
+    top: -20px;
+    font-size: 2rem;
+    opacity: 0.6;
+    animation: fall linear infinite;
+    z-index: 1;
+    /* Agar jatuh di belakang kotak ucapan */
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+/* Kotak Utama (Glassmorphism Effect) */
+.container {
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    /* Efek kaca buram */
+    -webkit-backdrop-filter: blur(10px);
+    /* Dukungan untuk Safari */
+    padding: 40px 20px;
+    border-radius: 20px;
+    border: 2px solid var(--gold);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-out;
+    position: relative;
+    z-index: 10;
+    /* Agar kotak ucapan berada di depan animasi */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bagian Header */
+h1 {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    color: var(--gold);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/* Kartu Ucapan Putih */
+.card {
+    background: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    margin: 10px 0;
+}
+
+.message {
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.closing {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--dark-red);
+}
+
+/* Bagian Footer */
+footer {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: var(--gold);
+}
+
+/* Hiasan Sudut (Corner Ornament) */
+.corner {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--gold);
+}
+
+.top-left {
+    top: 10px;
+    left: 10px;
+    border-right: none;
+    border-bottom: none;
+    border-top-left-radius: 10px;
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: 10px;
+    border-left: none;
+    border-top: none;
+    border-bottom-right-radius: 10px;
+}

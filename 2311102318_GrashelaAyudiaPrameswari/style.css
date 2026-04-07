@@ -1,0 +1,488 @@
+/* ============================
+   Imlek Greeting Card
+   Pure CSS - No JS / No Framework
+   2311102318 - Grashela Ayudia Prameswari
+   ============================ */
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(160deg, #1a0a2e, #2d1045, #1a0a2e);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 59, 48, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 204, 0, 0.06) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* ============ SAKURA PETALS ============ */
+.petal {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, #ffb7c5, #ff8fa3);
+    border-radius: 50% 0 50% 0;
+    opacity: 0.6;
+    animation: petalFall 8s linear infinite;
+    z-index: 1;
+}
+
+.petal-1 { left: 10%; animation-delay: 0s; animation-duration: 7s; }
+.petal-2 { left: 30%; animation-delay: 2s; animation-duration: 9s; width: 8px; height: 8px; }
+.petal-3 { left: 55%; animation-delay: 4s; animation-duration: 8s; }
+.petal-4 { left: 75%; animation-delay: 1s; animation-duration: 10s; width: 10px; height: 10px; }
+.petal-5 { left: 90%; animation-delay: 3s; animation-duration: 7.5s; }
+
+@keyframes petalFall {
+    0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 0;
+    }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.6; }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ============ CARD ============ */
+.card {
+    max-width: 460px;
+    width: 100%;
+    background: linear-gradient(180deg, #2a0a0a, #3d1111, #2a0a0a);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 204, 0, 0.15),
+        inset 0 1px 0 rgba(255, 204, 0, 0.1);
+    position: relative;
+    z-index: 5;
+}
+
+/* ============ BANNER ============ */
+.banner {
+    background:
+        linear-gradient(135deg, #b91c1c, #dc2626, #991b1b);
+    padding: 50px 30px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        repeating-conic-gradient(
+            rgba(255, 215, 0, 0.03) 0% 25%,
+            transparent 0% 50%
+        ) 0 0 / 40px 40px;
+    pointer-events: none;
+}
+
+.zodiac-circle {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #fbbf24;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow:
+        0 0 25px rgba(251, 191, 36, 0.3),
+        inset 0 0 15px rgba(251, 191, 36, 0.1);
+    animation: circleGlow 3s ease-in-out infinite alternate;
+    position: relative;
+}
+
+.zodiac-symbol {
+    font-size: 48px;
+    color: #fbbf24;
+    text-shadow: 0 0 15px rgba(251, 191, 36, 0.6);
+}
+
+@keyframes circleGlow {
+    0% { box-shadow: 0 0 25px rgba(251, 191, 36, 0.3), inset 0 0 15px rgba(251, 191, 36, 0.1); }
+    100% { box-shadow: 0 0 40px rgba(251, 191, 36, 0.5), inset 0 0 25px rgba(251, 191, 36, 0.2); }
+}
+
+.title {
+    font-size: 42px;
+    color: #fde68a;
+    letter-spacing: 8px;
+    text-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(251, 191, 36, 0.3);
+    position: relative;
+}
+
+.title-romanji {
+    color: #fcd34d;
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-top: 8px;
+    opacity: 0.8;
+    position: relative;
+}
+
+.year-badge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    border-radius: 30px;
+    position: relative;
+}
+
+.year-badge span {
+    color: #fbbf24;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.year-badge small {
+    color: #fcd34d;
+    font-size: 11px;
+    margin-top: 2px;
+    opacity: 0.7;
+}
+
+/* ============ GREETING ============ */
+.greeting {
+    padding: 40px 25px;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(180deg, #3d1111, #331010);
+}
+
+.cloud {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50px;
+    top: 20px;
+}
+
+.cloud::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50px;
+    top: -12px;
+    left: 20px;
+}
+
+.cloud-left { left: 15px; }
+.cloud-right { right: 15px; }
+
+.greeting-title {
+    font-size: 26px;
+    color: #fbbf24;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(251, 191, 36, 0.2);
+}
+
+.message-box {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(251, 191, 36, 0.12);
+    border-radius: 16px;
+    padding: 30px 22px;
+    position: relative;
+}
+
+.quote-mark {
+    font-size: 50px;
+    color: #fbbf24;
+    opacity: 0.2;
+    line-height: 1;
+    font-family: Georgia, serif;
+    text-align: left;
+}
+
+.quote-mark.bottom {
+    text-align: right;
+    margin-top: -10px;
+}
+
+.message-box p {
+    color: #e7c8a0;
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 8px 0;
+}
+
+.message-box .accent {
+    color: #fcd34d;
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 15px;
+    opacity: 0.85;
+}
+
+/* ============ WISH GRID ============ */
+.wish-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 0 25px 30px;
+    background: #331010;
+}
+
+.wish-card {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.06), rgba(251, 191, 36, 0.02));
+    border: 1px solid rgba(251, 191, 36, 0.1);
+    border-radius: 14px;
+    padding: 20px 14px;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.wish-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(251, 191, 36, 0.3);
+}
+
+.wish-emoji {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.wish-card h4 {
+    color: #fbbf24;
+    font-size: 14px;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+}
+
+.wish-card p {
+    color: #c9a07a;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* ============ LAMPION ROW ============ */
+.lampion-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 25px 0;
+    background: #331010;
+}
+
+.mini-lampion {
+    width: 28px;
+    height: 36px;
+    background: radial-gradient(ellipse, #ef4444, #b91c1c);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+    animation: lampionBob 2.5s ease-in-out infinite;
+}
+
+.mini-lampion::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 8px;
+    background: #fbbf24;
+    border-radius: 3px 3px 0 0;
+}
+
+.mini-lampion::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 10px;
+    background: #b91c1c;
+}
+
+.mini-lampion.delay-1 { animation-delay: 0.5s; }
+.mini-lampion.delay-2 { animation-delay: 1s; }
+
+@keyframes lampionBob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+/* ============ ENVELOPE ============ */
+.envelope-section {
+    padding: 30px 25px;
+    text-align: center;
+    background: linear-gradient(180deg, #331010, #2a0a0a);
+}
+
+.envelope {
+    width: 120px;
+    height: 160px;
+    background: linear-gradient(145deg, #dc2626, #b91c1c);
+    border-radius: 8px 8px 12px 12px;
+    margin: 0 auto 18px;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.envelope:hover {
+    transform: scale(1.08) rotate(-2deg);
+}
+
+.envelope::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 45px solid #991b1b;
+    border-radius: 3px;
+}
+
+.envelope-seal {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, #fbbf24, #d97706);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #7c2d12;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(251, 191, 36, 0.4);
+    z-index: 2;
+    animation: sealPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes sealPulse {
+    0% { box-shadow: 0 0 15px rgba(251, 191, 36, 0.4); }
+    100% { box-shadow: 0 0 25px rgba(251, 191, 36, 0.7); }
+}
+
+.envelope-text {
+    color: #c9a07a;
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* ============ FOOTER ============ */
+.footer {
+    padding: 28px 25px;
+    text-align: center;
+    background: #220808;
+}
+
+.gold-line {
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fbbf24, transparent);
+    margin: 0 auto 20px;
+    border-radius: 1px;
+}
+
+.footer-chinese {
+    color: #fbbf24;
+    font-size: 16px;
+    letter-spacing: 4px;
+    margin-bottom: 14px;
+}
+
+.footer-name {
+    color: #e7c8a0;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.footer-nim {
+    color: #8b6f50;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 480px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .title {
+        font-size: 34px;
+        letter-spacing: 5px;
+    }
+
+    .banner {
+        padding: 40px 20px 30px;
+    }
+
+    .greeting {
+        padding: 30px 18px;
+    }
+
+    .wish-grid {
+        grid-template-columns: 1fr;
+        padding: 0 18px 25px;
+    }
+
+    .zodiac-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .zodiac-symbol {
+        font-size: 38px;
+    }
+
+    .lampion-row {
+        gap: 14px;
+    }
+}
