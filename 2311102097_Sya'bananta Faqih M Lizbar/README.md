@@ -63,29 +63,26 @@ p {
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Gong Xi Fa Cai, Bubub!</title>
+    <title>Happy Chinese New Year ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="lantern-wrapper">
-            <div class="lantern">🏮</div>
-            <div class="lantern">🏮</div>
-        </div>
 
-        <div class="card">
-            <h1>Gong Xi Fa Cai</h1>
-            <h2>Happy Chinese New Year</h2>
-            <p>Untuk kesayanganku...</p>
-            
-            <input type="checkbox" id="open-message">
-            <label for="open-message" class="btn-angpao">Buka Angpao 🧧</label>
-            
-            <div class="hidden-message">
-                <p>Semoga di tahun Naga/Ular ini, kita makin langgeng dan bahagia terus ya! I love you! ❤️</p>
-            </div>
-        </div>
+    <div class="container">
+        <h1>Gong Xi Fa Cai 🧧</h1>
+        <h2>Untuk Bubub Tersayang ❤️</h2>
+
+        <p class="message">
+            Semoga di tahun ini kita makin langgeng, makin bucin,
+            dan makin banyak rezeki biar bisa jalan bareng terus 😳✨
+        </p>
+
+        <div class="lantern"></div>
+        <div class="lantern lantern2"></div>
+
+        <p class="footer">Dari: Yang Selalu Sayang Kamu 🥰</p>
     </div>
+
 </body>
 </html>
 ```
@@ -94,86 +91,73 @@ p {
 
 ```css
 body {
-    background-color: #800000; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #FFD700; 
-    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#8B0000, #FF0000);
+    color: gold;
+    text-align: center;
 }
 
 .container {
-    text-align: center;
-    position: relative;
+    padding-top: 100px;
 }
 
-.lantern-wrapper {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    position: absolute;
-    top: -150px;
+h1 {
+    font-size: 50px;
 }
 
-.lantern {
-    font-size: 3rem;
-    animation: sway 3s ease-in-out infinite;
+h2 {
+    margin-top: -10px;
+    font-weight: normal;
 }
 
-@keyframes sway {
-    0%, 100% { transform: rotate(-10deg); }
-    50% { transform: rotate(10deg); }
+.message {
+    margin: 30px auto;
+    width: 60%;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-.card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border: 3px solid #FFD700;
-    border-radius: 15px;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-#open-message {
-    display: none; 
-}
-
-.hidden-message {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.8s ease-in-out, opacity 0.5s;
-    opacity: 0;
-    margin-top: 20px;
+.footer {
+    margin-top: 50px;
     font-style: italic;
 }
 
-#open-message:checked ~ .hidden-message {
-    max-height: 200px;
-    opacity: 1;
+/* LAMPION */
+.lantern {
+    width: 80px;
+    height: 100px;
+    background: gold;
+    border-radius: 50% 50% 40% 40%;
+    margin: 30px auto;
+    position: relative;
 }
 
-.btn-angpao {
-    display: inline-block;
-    background: #FFD700;
-    color: #800000;
-    padding: 10px 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: transform 0.3s;
+.lantern::before {
+    content: '';
+    width: 10px;
+    height: 30px;
+    background: gold;
+    position: absolute;
+    top: -30px;
+    left: 35px;
 }
 
-.btn-angpao:hover {
-    transform: scale(1.1);
+.lantern::after {
+    content: '';
+    width: 5px;
+    height: 20px;
+    background: gold;
+    position: absolute;
+    bottom: -20px;
+    left: 37px;
+}
+
+.lantern2 {
+    margin-top: 10px;
+    transform: scale(0.8);
 }
 ```
-
-
-Output:
-<img src="Modul3.png" alt="preview" style="width:100%; max-width:900px;">
 
 # Penjelasan
 Penerapan Pure CSS pada proyek website perayaan Imlek ini merupakan sebuah eksperimen desain yang memadukan estetika tradisional oriental dengan kecanggihan logika styling modern, di mana setiap elemen visual seperti lampion yang bergoyang, kartu ucapan bernuansa emas, hingga mekanisme "buka angpao" digerakkan sepenuhnya oleh fitur bawaan CSS tanpa bantuan JavaScript.
