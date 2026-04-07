@@ -246,4 +246,6 @@ footer {
 }```
 
 ## Output
-<img width="1366" height="768" alt="Screenshot (1135)" src="https://github.com/user-attachments/assets/d4eaa9a4-d21f-4f8e-96c8-cd318ee03840" />
+
+<img width="1366" height="768" alt="Screenshot (1135)" src="https://github.com/user-attachments/assets/0f622d92-1853-45ee-92fc-89fd4d2a72c3" />
+
