@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: #8B0000;
+  color: gold;
+  text-align: center;
+}
+
+.container {
+  padding: 50px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.card {
+  background: #B22222;
+  padding: 20px;
+  margin: 20px auto;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px gold;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.lantern {
+  width: 50px;
+  height: 70px;
+  background: red;
+  border-radius: 50%;
+  margin: 20px auto;
+  position: relative;
+}
+
+.lantern::after {
+  content: '';
+  width: 4px;
+  height: 20px;
+  background: gold;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
