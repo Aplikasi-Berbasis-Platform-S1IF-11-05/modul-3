@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(to bottom, #8B0000, #B22222);
+    color: #FFD700;
+    text-align: center;
+}
+
+.container {
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease;
+}
+
+h2 {
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: rgba(255, 215, 0, 0.1);
+    border: 2px solid gold;
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 500px;
+    margin: auto;
+    backdrop-filter: blur(5px);
+    animation: float 3s ease-in-out infinite;
+}
+
+.card p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.love {
+    font-size: 20px;
+    font-weight: bold;
+    color: pink;
+}
+
+/* Lantern */
+.lantern {
+    width: 60px;
+    height: 80px;
+    background: red;
+    border-radius: 30px;
+    position: absolute;
+    top: 50px;
+    animation: swing 2s infinite ease-in-out;
+}
+
+.lantern::after {
+    content: "";
+    width: 10px;
+    height: 20px;
+    background: gold;
+    position: absolute;
+    bottom: -20px;
+    left: 25px;
+}
+
+.left {
+    left: 50px;
+}
+
+.right {
+    right: 50px;
+}
+
+/* Animations */
+@keyframes swing {
+    0% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
