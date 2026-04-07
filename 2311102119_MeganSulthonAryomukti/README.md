@@ -243,8 +243,8 @@ footer {
     margin-top: 20px;
     font-size: 0.9rem;
     color: #ffcc80;
-}```
-
+}
+```
 ## Output
 
 <img width="1366" height="768" alt="Screenshot (1135)" src="https://github.com/user-attachments/assets/0f622d92-1853-45ee-92fc-89fd4d2a72c3" />
