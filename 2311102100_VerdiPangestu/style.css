@@ -1,0 +1,121 @@
+/*2311102100-Verdi Pangestu*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Latar belakang merah gelap dengan efek gradient ke merah terang */
+    background-color: #8b0000; 
+    background-image: radial-gradient(circle at center, #d32f2f 0%, #5a0000 100%);
+    color: #ffd700; /* Warna teks dominan Emas */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Mencegah scroll jika lampion keluar layar */
+}
+
+/* === CONTAINER UTAMA === */
+.container {
+    position: relative;
+    max-width: 650px;
+    width: 90%;
+    padding: 50px 30px;
+    border: 3px solid #daa520; /* Border emas gelap */
+    border-radius: 20px;
+    background: rgba(139, 0, 0, 0.4); /* Efek tembus pandang merah */
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.2), inset 0 0 20px rgba(255, 215, 0, 0.1);
+    backdrop-filter: blur(8px); /* Efek glassmorphism murni CSS */
+}
+
+/* === TIPOGRAFI === */
+h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    /* Efek teks bercahaya emas */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6), 0 0 20px #ffd700;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #ffdf00;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* === KARTU PESAN UNTUK BUBUB === */
+.message-card {
+    background: linear-gradient(135deg, #b71c1c 0%, #e53935 100%);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px dashed #ffd700; /* Border putus-putus emas */
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Hover effect CSS */
+}
+
+/* Interaksi CSS Murni tanpa JS */
+.message-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.3);
+}
+
+.message-card p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #ffffff; /* Teks putih agar kontras dengan merah */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.message-card strong {
+    color: #ffd700;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #daa520;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+/* === ANIMASI LAMPION (PURE CSS) === */
+.lantern {
+    font-size: 5rem;
+    position: absolute;
+    top: -40px;
+    /* Memanggil animasi ayunan */
+    animation: swing 3s ease-in-out infinite alternate;
+    transform-origin: top center; /* Sumbu ayunan di bagian atas */
+    filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.5));
+}
+
+.lantern.left {
+    left: -20px;
+}
+
+.lantern.right {
+    right: -20px;
+    animation-delay: 1.5s; /* Dibuat tidak sinkron agar lebih natural */
+}
+
+/* Keyframes untuk ayunan lampion */
+@keyframes swing {
+    0% { transform: rotate(-12deg); }
+    100% { transform: rotate(12deg); }
+}
+
+/* Responsif untuk HP (Pure CSS Media Query) */
+@media (max-width: 600px) {
+    h1 { font-size: 2.8rem; }
+    .lantern { font-size: 3.5rem; top: -30px; }
+    .message-card p { font-size: 1.1rem; }
+}
