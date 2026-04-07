@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+
+    background-image: url('bg_imlek.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card {
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    border: 5px solid gold;
+    margin-left: 85px;
+}
+
+h1 {
+    color: #facd05;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #facd05;
+    margin-top: 0;
+}
+
+p {
+    color: #f8c5c5;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+.divider {
+    height: 2px;
+    background: gold;
+    margin: 10px 0;
+}
+
+.from {
+    font-style: italic;
+    color: #f8c5c5;
+    margin: 15px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: gold;
+    border: none;
+    border-radius: 25px;
+    color: #8b0000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ffd700;
+    transform: scale(1.05);
+}
