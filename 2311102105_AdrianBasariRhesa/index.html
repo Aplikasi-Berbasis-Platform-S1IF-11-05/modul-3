@@ -1,0 +1,67 @@
+<!-- 2311102105-Adrian Basari Rhesa -->
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gong Xi Fa Cai - Untuk Bubub</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Noto+Sans+SC:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="corner top-left"></div>
+        <div class="corner bottom-right"></div>
+
+        <header>
+            <h1>恭喜发财</h1>
+            <p class="subtitle">Gong Xi Fa Cai</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <p>Untuk yang tersayang,</p>
+                <h2>Bubub ❤️</h2>
+
+                <p class="message">
+                    Semoga di tahun baru ini, kebahagiaan menyertaimu, rezeki mengalir deras untukmu,
+                    dan semua impianmu menjadi nyata.
+                </p>
+
+                <p class="closing">
+                    Dan yang paling penting... <br>
+                    tetaplah menjadi alasan tersenyumku ya! 😆✨
+                </p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Dibuat dengan penuh cinta ❤️</p>
+        </footer>
+    </div>
+
+    <script>
+        function createLantern() {
+            const symbols = ['🧧', '🏮', '✨', '🌸'];
+            const lantern = document.createElement('div');
+            lantern.classList.add('lantern');
+            lantern.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+            lantern.style.left = Math.random() * 100 + "vw";
+            lantern.style.animationDuration = Math.random() * 3 + 2 + "s";
+            document.body.appendChild(lantern);
+
+            setTimeout(() => {
+                lantern.remove();
+            }, 5000);
+        }
+        setInterval(createLantern, 500);
+    </script>
+
+</body>
+
+</html>
