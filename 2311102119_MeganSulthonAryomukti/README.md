@@ -108,3 +108,142 @@ Property `animation` yang sering dipakai:
 - `animation-iteration-count` — Berapa kali animasi diulang (`infinite` = terus-menerus).
 
 ---
+
+# Tugas 3 — Project Bucin (Edisi Imlek)
+
+## Code
+
+**index.html**
+```html
+<!-- 2311102119-Megan Sulthon Aryomukti -->
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gong Xi Fa Cai - Spesial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Gong Xi Fa Cai 🧧</h1>
+            <p class="subtitle">Selamat Tahun Baru Imlek</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <p>Untuk seseorang yang spesial,</p>
+                <h2>Bubub ❤️</h2>
+
+                <p class="message">
+                    Semoga tahun ini penuh dengan kebahagiaan, rezeki yang melimpah,
+                    dan segala hal baik yang kamu harapkan.
+                </p>
+
+                <p class="closing">
+                    Dan semoga… kamu tetap jadi milikku ya 😆✨
+                </p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Dibuat dengan ❤️</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
+```
+
+**style.css**
+```css
+/*2311102119-Megan Sulthon Aryomukti*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #8b0000, #c62828);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    max-width: 500px;
+    width: 90%;
+}
+
+/* Header */
+h1 {
+    font-size: 2.8rem;
+    color: #ffd700;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #ffe082;
+    margin-bottom: 30px;
+}
+
+/* Card */
+.card {
+    background: linear-gradient(145deg, #b71c1c, #e53935);
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Text */
+.card p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.card h2 {
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+.message {
+    font-size: 1.1rem;
+}
+
+.closing {
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #ffcc80;
+}```
+
+## Output
+<img width="1366" height="768" alt="Screenshot (1135)" src="https://github.com/user-attachments/assets/d4eaa9a4-d21f-4f8e-96c8-cd318ee03840" />
