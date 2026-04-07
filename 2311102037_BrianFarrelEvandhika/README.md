@@ -62,248 +62,43 @@ p {
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Bucin: Edisi Imlek</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perayaan Imlek untuk Kesayangan</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Ucapan Selamat Tahun Baru Imlek untuk Orang Tersayang.">
 </head>
 <body>
 
-    <!-- Lampion -->
-    <div class="lantern left">
-        <div class="wire"></div>
-        <div class="lantern-body">福</div>
-        <div class="tassel"></div>
-    </div>
-    <div class="lantern right">
-        <div class="wire"></div>
-        <div class="lantern-body">福</div>
-        <div class="tassel"></div>
-    </div>
+  <!-- Background Animated Blobs -->
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
 
-    <div class="container">
-        <input type="checkbox" id="tap-trigger">
-        
-        <!-- Teks pengantar sebelum angpao ditap -->
-        <div class="intro-text">
-            <p>Ada yang spesial nih buat kesayangan...</p>
-        </div>
+  <!-- Giant Background Watermark -->
+  <div class="watermark-center">2311102037_Brian Farrel Evandhika</div>
 
-        <label for="tap-trigger" class="angpao">
-            <div class="angpao-flap"></div>
-            <span class="tap-text">Tap Angpaonya!</span>
-        </label>
-
-        <div class="message">
-            <h1>Gong Xi Fa Cai! 🧧</h1>
-            <p>Semoga tahun ini penuh hoki, rezekinya lancar, dan kita makin langgeng terus ya, bubub! ❤️</p>
-        </div>
+  <!-- Main Content Card -->
+  <main class="card">
+    <div class="css-angpao-wrapper">
+      <div class="css-angpao"></div>
     </div>
+    <h1>Selamat Tahun Baru Imlek</h1>
+    <p>Gong Xi Fa Cai, sayangku! Semoga tahun ini membawa banyak kebahagiaan, kemakmuran, dan kesehatan untuk kita. Mari melangkah bersama menyambut tahun yang penuh hoki dan cinta.</p>
+    
+    <div class="button-group">
+      <a href="#" class="btn btn-primary">Buka Angpao 🧧</a>
+      <a href="#" class="btn btn-secondary">Kirim Peluk ❤️</a>
+    </div>
+  </main>
+
+  <!-- Corner Watermark -->
+  <div class="watermark">2311102037_Brian Farrel Evandhika</div>
 
 </body>
 </html>
-```
-
-### Source code - css
-
-```css
-/* Background */
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: radial-gradient(circle at center, #8b0000 0%, #3a0000 100%);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden;
-}
-
-.container {
-    position: relative;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Sembunyikan trigger */
-#tap-trigger {
-    display: none;
-}
-
-/* Lampion */
-.lantern {
-    position: absolute;
-    top: -10px;
-    z-index: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform-origin: top center;
-    animation: sway 3s ease-in-out infinite;
-}
-
-/* Posisi lampion */
-.lantern.left { left: 15%; animation-delay: 0.5s; }
-.lantern.right { right: 15%; animation-delay: 0s; }
-
-/* Tali lampion */
-.wire {
-    width: 2px;
-    height: 40px;
-    background: #ffd700;
-}
-
-/* Badan lampion */
-.lantern-body {
-    width: 70px;
-    height: 80px;
-    background: #ff1a1a;
-    border-radius: 50% 50% 15% 15%;
-    border: 2px solid #ffd700;
-    color: #ffd700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 28px;
-    font-weight: bold;
-    box-shadow: 0 0 20px rgba(255, 26, 26, 0.8), inset 0 0 10px #ff6666;
-}
-
-/* bagian bawah lampion */
-.tassel {
-    width: 12px;
-    height: 35px;
-    background: repeating-linear-gradient(90deg, #ffd700 0px, #ffd700 2px, transparent 2px, transparent 4px);
-    border-radius: 0 0 5px 5px;
-    margin-top: 2px;
-}
-
-/* Animasi lampion */
-@keyframes sway {
-    0%, 100% { transform: rotate(6deg); }
-    50% { transform: rotate(-6deg); }
-}
-
-/* --- TEKS PENGANTAR --- */
-.intro-text {
-    position: absolute;
-    top: 20%;
-    color: #ffd700;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-    transition: all 0.5s ease;
-    z-index: 1;
-}
-
-/* --- ANGPAO --- */
-.angpao {
-    display: block;
-    width: 160px;
-    height: 220px;
-    background-color: #d32f2f;
-    border: 2px solid #ffd700;
-    border-radius: 10px;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
-    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-    margin-top: 40px; /* Jarak dari teks pengantar */
-}
-
-.angpao-flap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 80px solid transparent;
-    border-right: 80px solid transparent;
-    border-top: 70px solid #b71c1c;
-    border-radius: 8px 8px 0 0;
-}
-
-.tap-text {
-    position: absolute;
-    bottom: 30px;
-    left: 0;
-    width: 100%;
-    color: #ffd700;
-    font-weight: bold;
-    font-size: 1.1rem;
-    text-align: center;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); color: #fffacd; }
-    100% { transform: scale(1); }
-}
-
-/* --- PESAN UCAPAN --- */
-.message {
-    position: absolute;
-    transform: scale(0.1);
-    opacity: 0;
-    z-index: 1;
-    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    color: #ffd700;
-    width: 80%;
-    max-width: 450px;
-    text-align: center;
-    pointer-events: none;
-}
-
-.message h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-    margin-top: 0;
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
-.message p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: #fff;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-}
-
-@keyframes glow {
-    from { text-shadow: 0 0 10px #ffd700, 0 0 20px #ff0000; }
-    to { text-shadow: 0 0 20px #ffaa00, 0 0 30px #ff4da6; }
-}
-
-/* --- CHECKBOX (INTERAKSI TANPA JS) --- */
-
-/* Saat ditap, teks pengantar pudar */
-#tap-trigger:checked ~ .intro-text {
-    opacity: 0;
-    transform: translateY(-20px);
-}
-
-/* Saat ditap, angpao hilang */
-#tap-trigger:checked ~ .angpao {
-    transform: translateY(200px) scale(0);
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* Saat ditap, pesan utama muncul! */
-#tap-trigger:checked ~ .message {
-    transform: scale(1);
-    opacity: 1;
-    z-index: 3;
-}
 ```
 
 
