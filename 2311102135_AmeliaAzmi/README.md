@@ -195,7 +195,9 @@ button:hover {
 }
 ```
 Output:
-<img src="lunar.png" alt="preview" style="width:100%; max-width:900px;">
+<img width="1244" height="750" alt="Screenshot 2026-04-07 161309" src="https://github.com/user-attachments/assets/76a14605-ae00-466c-9b06-02be661bb0c0" />
+
+
 
 # Penjelasan
 Program ini menampilkan desain kartu ucapan digital dengan gaya modern menggunakan HTML dan CSS. Struktur halaman terdiri dari satu elemen utama berupa kartu yang berada di tengah layar.
