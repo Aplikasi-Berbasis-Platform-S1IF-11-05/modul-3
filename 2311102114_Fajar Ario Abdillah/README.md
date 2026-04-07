@@ -499,4 +499,4 @@ blockquote {
 
 ## Output
 
-![Bukti](Assets/Bukti.png)
+![Bukti](assets/Screenshot%202026-04-07%20084844.png)
