@@ -1,0 +1,102 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(135deg, #8b0000, #ff0000);
+}
+
+/* CONTAINER */
+.container {
+    perspective: 1000px;
+}
+
+/* CARD */
+.card {
+    width: 320px;
+    height: 420px;
+    padding: 30px;
+
+    text-align: center;
+    color: white;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+
+    transition: 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+    transform: scale(1.05) rotateY(8deg);
+}
+
+/* GLOW CIRCLE */
+.glow-circle {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 20px auto;
+
+    background: gold;
+    border-radius: 50%;
+
+    box-shadow: 
+        0 0 20px gold,
+        0 0 40px gold,
+        0 0 60px rgba(255, 215, 0, 0.6);
+}
+
+/* TEXT */
+h1 {
+    font-size: 36px;
+    color: gold;
+}
+
+h2 {
+    font-size: 16px;
+    margin: 10px 0 15px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+
+    background: gold;
+    color: black;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+button:hover {
+    background: white;
+    transform: scale(1.05);
+}
