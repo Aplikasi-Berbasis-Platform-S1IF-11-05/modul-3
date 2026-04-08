@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#8B0000, #FF0000);
+    color: gold;
+    text-align: center;
+}
+
+.container {
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    margin-top: -10px;
+    font-weight: normal;
+}
+
+.message {
+    margin: 30px auto;
+    width: 60%;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.footer {
+    margin-top: 50px;
+    font-style: italic;
+}
+
+/* LAMPION */
+.lantern {
+    width: 80px;
+    height: 100px;
+    background: gold;
+    border-radius: 50% 50% 40% 40%;
+    margin: 30px auto;
+    position: relative;
+}
+
+.lantern::before {
+    content: '';
+    width: 10px;
+    height: 30px;
+    background: gold;
+    position: absolute;
+    top: -30px;
+    left: 35px;
+}
+
+.lantern::after {
+    content: '';
+    width: 5px;
+    height: 20px;
+    background: gold;
+    position: absolute;
+    bottom: -20px;
+    left: 37px;
+}
+
+.lantern2 {
+    margin-top: 10px;
+    transform: scale(0.8);
+}
