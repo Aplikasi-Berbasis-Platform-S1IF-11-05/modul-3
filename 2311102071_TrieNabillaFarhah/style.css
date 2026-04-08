@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #b30000;
+    color: gold;
+    text-align: center;
+    position: relative;
+}
+
+/* subtle pattern */
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(45deg,
+            rgba(255, 255, 255, 0.03),
+            rgba(255, 255, 255, 0.03) 10px,
+            transparent 10px,
+            transparent 20px);
+}
+
+/* container */
+.container {
+    max-width: 600px;
+    padding: 20px;
+    z-index: 1;
+}
+
+/* top text */
+.top-text {
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* title */
+h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+/* romantic line */
+.love {
+    font-size: 14px;
+    color: #ffd700cc;
+    margin-bottom: 20px;
+    font-style: italic;
+    animation: fadeIn 2s ease;
+}
+
+/* desc */
+.desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ffd700cc;
+}
+
+/* spark decor */
+.spark {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border: 2px solid gold;
+    border-radius: 50%;
+    opacity: 0.25;
+    animation: pulse 3s infinite;
+}
+
+.spark::before,
+.spark::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: gold;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.spark::after {
+    transform: rotate(90deg);
+}
+
+.spark1 {
+    top: 15%;
+    left: 20%;
+}
+
+.spark2 {
+    bottom: 15%;
+    right: 20%;
+}
+
+/* tiny heart */
+.heart {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+    opacity: 0.6;
+    animation: beat 1.5s infinite;
+}
+
+/* animations */
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.2;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: scale(0.9);
+        opacity: 0.2;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes beat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+}
